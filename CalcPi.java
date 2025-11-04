@@ -20,7 +20,9 @@ public class CalcPi {
             currentDivisionIndex +=2;
         }
 
-        System.out.println("pi, according to Java: " + Math.PI);
-        System.out.println("pi, approximated:      " + currentTotalValue*4);
+        System.out.println("pi according to Java: " + Math.PI);
+        System.out.println("pi, approximated:     " + currentTotalValue*4);
+//        pi according to Java: 3.141592653589793
+//        pi, approximated:     4.0
 	}
 }
