@@ -12,7 +12,8 @@ public class Cheers {
         char[] useAnCharacters = {'A', 'E', 'F', 'H', 'I', 'L', 'M', 'N', 'O', 'R','S', 'X'};
 
         for (int i = 0; i < cheer.length(); i++) {
-            String letterPrefix = "a";
+            // Yeah... In the tests they actually align the lines by having another space after "a"
+            String letterPrefix = "a ";
             char currentCharacterUpper = Character.toUpperCase(cheer.charAt(i));
             for (int j = 0; j < useAnCharacters.length; j++) {
                 if (currentCharacterUpper == useAnCharacters[j]) {
@@ -24,11 +25,8 @@ public class Cheers {
         }
         System.out.println("What does that spell?");
 
-        // Looks like there is a bug with the tests, that demands the last line of the cheers to not contain a newline...
-        for (int i = 0; i < numOfCheers-1; i++) {
+        for (int i = 0; i < numOfCheers; i++) {
             System.out.println(cheer.toUpperCase() + "!!!");
         }
-
-        System.out.print(cheer.toUpperCase() + "!!!");
     }
 }
