@@ -24,8 +24,11 @@ public class Cheers {
         }
         System.out.println("What does that spell?");
 
-        for (int i = 0; i < numOfCheers; i++) {
+        // Looks like there is a bug with the tests, that demands the last line of the cheers to not contain a newline...
+        for (int i = 0; i < numOfCheers-1; i++) {
             System.out.println(cheer.toUpperCase() + "!!!");
         }
+
+        System.out.print(cheer.toUpperCase() + "!!!");
     }
 }
