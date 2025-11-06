@@ -23,7 +23,7 @@ public  class  TestRandom {
         }
         System.out.println("> 0.5: " + greaterThanHalfCounter + " times");
         System.out.println("<= 0.5: " + lessEqualThanHalfCounter + " times");
-        if (greaterThanHalfCounter < lessEqualThanHalfCounter) {
+        if (lessEqualThanHalfCounter > 0) {
             System.out.println("Ratio: " + (double)greaterThanHalfCounter / (double)lessEqualThanHalfCounter);
         }
 	}
