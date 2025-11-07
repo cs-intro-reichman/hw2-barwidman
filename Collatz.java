@@ -8,19 +8,21 @@ public class Collatz {
             return;
         }
         int seed = Integer.parseInt(args[0]);
-        char mode = args[1].charAt(0);
+        String mode = args[1];
 
-        if (mode != 'c' && mode != 'v') {
-            System.err.println(String.format("Invalid mode '%c' given", mode));
+        if (!mode.equals("v") && !mode.equals("c")) {
+            System.err.println("Invalid mode given: " + mode);
             return;
         }
+        boolean verboseMode = mode.equals("v");
+
         int count;
 
         for (int i = 1; i <= seed; i++) {
             count = 1;
             int currentValue = i;
             do {
-                if (mode == 'v') {
+                if (verboseMode) {
                     System.out.print(currentValue + " ");
                 }
 
@@ -31,7 +33,7 @@ public class Collatz {
                 }
                 count++;
             } while (currentValue != 1);
-            if (mode == 'v') {
+            if (verboseMode) {
                 System.out.print(currentValue + " ");
                 System.out.print("(" + count + ")");
                 System.out.println();
