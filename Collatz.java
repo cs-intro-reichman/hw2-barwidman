@@ -1,3 +1,10 @@
+/*
+Feedback:
+Great work!
+Yam
+*/
+
+
 // Demonstrates the Collatz conjecture.
 public class Collatz {
     public static final int NUM_OF_ARGS = 2;
@@ -43,3 +50,4 @@ public class Collatz {
 
     }
 }
+
